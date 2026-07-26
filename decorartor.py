@@ -1,4 +1,4 @@
-def border(func):
+def decorator (func):
     def display(*args, **kwargs):
         print("=" * 30)
         func(*args, **kwargs)
@@ -23,7 +23,7 @@ class Report:
             "\nDescription : " + self.description
         )
 
-    @border
+    @decorator
     def display_report(self):
         print(self)
 
